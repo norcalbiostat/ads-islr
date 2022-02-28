@@ -1,0 +1,73 @@
+---
+title: "Statistical Learning (ISLR Ch 2)"
+output:   
+  html_document: 
+    highlight: tango
+    theme: yeti
+    css: DrDstyle.css
+    toc: yes
+    toc_float: true
+    toc_depth: 2
+always_allow_html: true
+---
+
+# Part I: Shared learning
+
+Review ISLR Chapter 2 textbook and videos and prepare answers to the following questions. Be concise as you will have to share out/explain it to others. 
+
+[[Full YouTube playlist]](https://www.youtube.com/watch?v=p9n2w236B48&list=PLAOUn-KLSAVOwBuphhdi-BT0jjhuWyvPL)
+
+## [Statistical Learning and Regression](https://www.youtube.com/watch?v=p9n2w236B48&list=PL5-da3qGB5IDvuFPNoSqheihPOQNJpzyy&index=1) (11:41)
+
+1. What is f? 
+2. Why do we care about estimating f? 
+3. Describe the two types of errors in a model.  
+4. What concept in 456 does irreducible error portion of the model correspond to? 
+
+
+## [Curse of Dimensionality and Parametric Models](https://www.youtube.com/watch?v=HndOzII4jzs&list=PL5-da3qGB5IDvuFPNoSqheihPOQNJpzyy&index=2) (11:40)
+
+1. Summarize the curse of dimensionality.
+2. What is the difference between a parametric & non-parametric model? Give an example of each. 
+3. What are the advantages & disadvantages of a parametric approach to regression or classification (as opposed to a nonparametric approach)?
+4. Why would we ever choose to use a more restrictive method instead of a very flexible approach?
+5. What is the difference between supervised & unsupervised learning? Give an example of each. 
+
+## [Assessing Model Accuracy and Bias-Variance Trade-off](https://www.youtube.com/watch?v=VaN1RUDuioQ&list=PL5-da3qGB5IDvuFPNoSqheihPOQNJpzyy&index=3) (10:04)
+
+1. What is the primary measure of model accuracy for regression models? 
+2. Compare and contrast a _smoothing spline_ to a _linear regression line_. (What is the same, what is different) 
+3. What's the difference between training and testing data? Why do we need both? 
+4. What is overfitting? 
+5. If we don't have a testing data set, what method can we use to estimate the MSE of the testing data?
+6. What is the bias-variance trade-off? 
+
+## [Classification Problems and K-Nearest Neighbors](https://www.youtube.com/watch?v=TnVRhLqThR4&list=PL5-da3qGB5IDvuFPNoSqheihPOQNJpzyy&index=4) (15:37)
+
+1. What is the primary measure of model accuracy for classification models? 
+2. Describe the Bayes Classifier 
+3. What is the Bayes error rate? 
+4. What is a limitation of the Bayes classifier? 
+5. Describe how the K-Nearest Neighbors classifier works. 
+6. Name a benefit of using a KNN model. 
+7. What happens to the accuracy/bias of the model as the K increases? Why? 
+
+----
+
+# Part II: Chapter 2 exercises 
+
+ISLR Ch 2 Exercises: 1, 2, 4 (One example each). Write your answers here. 
+
+----
+
+# Part III: Learning Tidymodels
+
+Let's add to our R toolbox and learn how to use tidymodels. The ISLR book shows you how to perform these models using mainly base R code, perhaps some from the `caret` package. I've typically used `caret` as well, but the use of `tidymodels` is gaining popularity, and there is an entire website repliating the labs in ISLR using [Tidymodel Code](https://emilhvitfeldt.github.io/ISLR-tidymodels-labs/index.html). So let's see what it's about. 
+
+1. Go here https://www.tidymodels.org/ & install the `tidymodels` package
+2. Start a new Rmarkdown file and replicate [Step 1: Build a model](https://www.tidymodels.org/start/models/). 
+
+
+
+
+
