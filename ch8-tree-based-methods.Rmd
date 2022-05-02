@@ -1,0 +1,92 @@
+---
+title: "Tree Based models (nonparametric) (ISLR Ch 8)"
+output:   
+  html_document: 
+    highlight: tango
+    theme: yeti
+    css: DrDstyle.css
+    toc: yes
+    toc_float: true
+    toc_depth: 2
+always_allow_html: true
+---
+
+# Part I: In class shared learning
+
+## [The Basics of Decision Trees (ISLR 8.1)](https://www.youtube.com/watch?v=6ENTbK3yQUQ&list=PL5-da3qGB5IB23TLuA8ZgVGC8hV8ZAdGh) (14:37)
+
+1. What does it mean to _segment_ the data? What would this be called in MATH 456? 
+2. Are tree based methods supervised or unsupervised methods? 
+3. What does CART stand for? 
+4. What determines if a record goes to the left or right of a split? (i.e. what records go left, what go right?) 
+5. What do the values in the _internal_ and _terminal_ nodes represent? 
+6. How can you tell which variables are most 'important' in a tree model? 
+7. What is the _feature space_? Compare this to the term _predictor space_. Do this in your own words. You may want to look into other sources of information (outside the book) for something that fits into your mental model. 
+8. Explain how _recursive binary splitting_ works without using equations. 
+9. Explain why this process has this name. That is, what about this process is _recursive_? (don't use the word in the definition either), why _binary_?
+10. Why its considered _top down_ and _greedy_. 
+11. What is a _stopping criterion_? Give an example of one. 
+12. Why are decision trees considered a statistical _learning_ model? Where does the algorithmic learning occur? 
+
+
+## [Pruning Trees](https://www.youtube.com/watch?v=GfPR7Xhdokc&list=PL5-da3qGB5IB23TLuA8ZgVGC8hV8ZAdGh&index=2) (11:45)
+
+1. How are predictions of new values made? 
+2. Why is pruning necessary? Why can't we just build a short tree by stopping early?
+3. How is _Cost complexity pruning_ similar to LASSO? 
+4. What is the penalty function? Report this in symbols, not words, but define each symbol in words.
+5. How is $\alpha$ chosen? 
+6. What information do you get out of Figure 8.5? If you were to build this plot as part of your analysis (just the black and green lines), what information can you draw from it? 
+
+
+## [Classification Trees (ISLR 8.1.2)](https://www.youtube.com/watch?v=hPEJoITBbQ4&list=PL5-da3qGB5IB23TLuA8ZgVGC8hV8ZAdGh&index=3) (11:00)
+
+1. How do you make predictions from a classification tree? 
+2. What is the _classification error rate_? 
+3. What does _node purity_ mean? Why is it important (it may be helpful to read through the example before answering this question).
+4. Is a large or small _Gini index_ preferred? 
+5. If prediction accuracy is the goal of tree building, what measure should be used to prune the tree? 
+
+
+
+# Bagging, Random Forests, Boosting (ISLR 8.2)
+
+## [Bagging and Random Forests(ISLR 8.2.1)](https://www.youtube.com/watch?v=lq_xzBRIWm4&list=PL5-da3qGB5IB23TLuA8ZgVGC8hV8ZAdGh&index=4) (13:45)
+
+* Bagging is a general-purpose procedure for reducing which of the following measures: Bias or variance?
+* Explain how bagging works
+* What is an out of bag error estimate? Why do we care about it? 
+* Bagging improves prediction accuracy at the expense of what? (one word)
+* How is the Gini index used to generate a summary measure of importance for each predictor? 
+* How does random forests decorrelate the multiple trees?
+* Why is high correlation between trees not ideal?
+* What's a good value for the predictor subset size $m$ at each split?
+
+## [Boosting & BART](https://www.youtube.com/watch?v=RSWg_islt9c&list=PL5-da3qGB5IB23TLuA8ZgVGC8hV8ZAdGh&index=5) (12:08)
+
+* How is boosting a sequential method? Explain how the boosting algorithm doesn't use a bootstrapped sample like bagging. 
+* If it's not being fit on a bootstrapped sample of the data, what are the trees being fit on?
+* Why is boosting considered to be a "slow learner" 
+* What are the three tuning parameters for boosting? 
+
+(Not in the video)
+
+* Explain how BART an improvement over boosting? What is subtly different about this method compared to boosting? 
+
+
+
+----
+
+# Part II: Exercises / Learning Tidymodels
+
+Time to compare non-parametric models to the parametric models you built in the prior assignments. 
+
+Following the [tidymodels framework for tree based methods](https://emilhvitfeldt.github.io/ISLR-tidymodels-labs/tree-based-methods.html) lab create the following. 
+
+1. Build both classification tree. Prune it. Make a plot. Interpret the results. Calculate test sample accuracy. Compare the results to your classification model from chapter 4
+
+2. Build a regression tree. Prune it. Make a plot. Interpret the results. Calculate test sample accuracy. Compare the results to your regression model from your chapter 3 tutorial. 
+
+3. Using the same data, grow a forest of trees using at least 2 out of the four methods discussed (bagging, random forests, boosting, BART). Plot the variable importance. Interpret the results. Calculate test sample accuracy. Compare the results to your regression model from your chapter 3 tutorial. 
+
+

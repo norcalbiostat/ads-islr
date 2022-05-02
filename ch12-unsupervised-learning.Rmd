@@ -1,0 +1,78 @@
+---
+title: "Unsupervised Learning (ISLR Ch 12)"
+output:   
+  html_document: 
+    highlight: tango
+    theme: yeti
+    css: DrDstyle.css
+    toc: yes
+    toc_float: true
+    toc_depth: 2
+always_allow_html: true
+---
+
+# Part I: In class shared learning
+
+## [The Challenge of Unsupervised Learning ISLR 12.1](https://www.youtube.com/watch?v=WIMgMBYqhKE&list=PL5-da3qGB5IBC-MneTc9oBZz0C6kNJ-f2&index=1) (Up to 6 min)
+
+* Briefly stated, what is the main difference between supervised and unsupervised learning? 
+* Give two examples of unsupervised learning that are not covered in the reading/video
+* What is one advantage, and one disadvantage to unsupervised learning? 
+
+## Principal Components Analysis
+**[Video 1](https://www.youtube.com/watch?v=WIMgMBYqhKE&list=PL5-da3qGB5IBC-MneTc9oBZz0C6kNJ-f2&index=1) (12:37) [Video 2](https://www.youtube.com/watch?v=zMfomUERNww&list=PL5-da3qGB5IBC-MneTc9oBZz0C6kNJ-f2&index=2) (17:40)**
+
+* Give an example of when PCA is useful.
+* Without using math notation, explain how PCA works. 
+* What is special about the first principal component?
+* Since PCA is a tool to reduce the number of variables while maintaining the same amount of variance, what pre-processing step should be done to each column?
+* What could happen if you don't do this step?
+* What do the arrows on a biplot represent? How do you interpret them?
+* How are the first two components involved in the act of projecting points in a 3D space onto a 2D projection?
+* How can you determine the number of components you should use?
+* Explain how PCA is used to handle sparseness in movie recommendation algorithms _not in video_
+
+## [K-means Clustering](https://www.youtube.com/watch?v=6psm_Y5QREU&list=PL5-da3qGB5IBC-MneTc9oBZz0C6kNJ-f2&index=3) (17:17)
+
+* What is _market segmentation_?
+* k-means clustering seeks to minimize which variance? 
+* How can you measure distance between the points? 
+* What is a centroid? 
+* Explain the k-means clustering algorithm without math. 
+* Why should you start k-means clustering at a variety of starting points? 
+
+## [Hierarchical Clustering](https://www.youtube.com/watch?v=7r3jfKKXhjY&list=PL5-da3qGB5IBC-MneTc9oBZz0C6kNJ-f2&index=4) (14:45)
+
+* Describe the process of agglomerative clustering
+* How do you interpret the height on a dendogram? 
+* Explain at least one way to measure the distance between two clusters of points? 
+* What are some other measures of distance aside from the Euclidean distance? When would these be more advantageous to use?
+
+
+## Practical Issues in Clustering (12.4.3)
+* Noone likes making decisions, but a number of them have to be made when performing clustering. List a few. 
+* What steps can you take to justify the decisions made? 
+* Do these clustering techniques reveal the absolute truth about a data set? Why or why not?
+
+
+----
+
+# Part II: Exercises 
+
+Complete exercises 9 (USA arrests) and 13 (genomic analysis on 40 tissue samples). Both ask you to perform hierarchical clustering with various adjustments. 
+
+* Also use k-means clustering on Exercise 9. 
+* Also use PCA on Exercise 13.
+* Write a conclusion at the end of your exercise. 
+    - Did you get the same results using different methods? Do you find one approach easier to implement or interpret than others? Could you have used PCA on Excerise 9? Why or why not?
+
+**Submission formatting instructions**
+
+* Create a new Rmarkdown document in your ISLR repo called `ch12-exercises.Rmd`. 
+* Use markdown formatting with 1st and second level headers, and include a table of contents. Knit your work to HMTL before you push. 
+* Use the [Tidymodels ISLR lab](https://emilhvitfeldt.github.io/ISLR-tidymodels-labs/unsupervised-learning.html) as a reference. Using tidymodels is not required
+
+
+
+
+

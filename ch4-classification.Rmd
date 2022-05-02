@@ -1,0 +1,102 @@
+---
+title: "Classification (ISLR Ch 4)"
+output:   
+  html_document: 
+    highlight: tango
+    theme: yeti
+    css: DrDstyle.css
+    toc: yes
+    toc_float: true
+    toc_depth: 2
+always_allow_html: true
+---
+
+# Part I: Shared learning
+
+Review ISLR Chapter 4 textbook and videos and prepare answers to the following questions. Be concise as you will have to share out/explain it to others. 
+
+[[Full YouTube playlist]](https://www.youtube.com/playlist?list=PL5-da3qGB5IC4vaDba5ClatUmFppXLAhE). Note: Some videos are not on YouTube. I've downloaded them and provided links for you. 
+
+## [Introduction to Classification (4.1, 4.2)](https://www.youtube.com/watch?v=RN_dweQpcpo&list=PL5-da3qGB5IC4vaDba5ClatUmFppXLAhE&index=1) (10:25)
+
+1. Give an example of a classification problem that directly affects you, your life, or is meaningful to you in some manner. You don't need to justify or explain why it is meaningful to you. 
+2. In classification models, what are you estimating? 
+3. What are the arguments for why you can use linear regression on a binary outcome? 
+3. What are the arguments against why you can use linear regression on a binary outcome? 
+
+
+## [Logistic Regression and Maximum Likelihood (4.3.1-4.3.3)](https://csuchico.box.com/s/g0qphop8rx0fo9x15nbekmhzwexdudgf) (9:07)
+
+1. Why do we use the logistic function? 
+2. How do you estimate parameters in a logistic model given the data? 
+3. Explain the _odds_ to someone without a math background or without using an equation. 
+4. How do you interpret a coefficient in a logistic regression model? 
+
+## [Multivariate Logistic Regression and Confounding (4.3.4)](https://csuchico.box.com/s/00g904as31pbk6vh3w5wwusu8e1io1v1) (9:53)
+_No questions to answer_.
+
+## [Case-Control Sampling and Multiclass Logistic Regression (Bonus info plus 4.3.5)](https://www.youtube.com/watch?v=RIW3H03MNrE&list=PL5-da3qGB5IC4vaDba5ClatUmFppXLAhE&index=2) (7:28)
+
+1. Briefly describe what case-control sampling is.
+2. Aside from the example given in the video, where could this tactic be used? 
+3. What is the term used to describe when the event of interest is rare and makes up a small portion of events in the data? 
+4. What are the benefits of case control sampling over just taking a larger sample? 
+5. How is the regression model expanded to fit outcome variables with more than two classes? 
+
+
+## [LDA and Bayes Theorem (4.4)](https://www.youtube.com/watch?v=gPOMLCR1oF8&list=PL5-da3qGB5IC4vaDba5ClatUmFppXLAhE&index=3) (7:12)
+
+1. What's the primary difference between LDA and Logistic Regression? 
+2. Why do we need an alternative to Logistic Regression? 
+3. How does LDA connect with Bayes Theorem?
+4. What is a _prior distribution_?
+5. What is a _posterior distribution_?
+6. How is class assignment done under LDA? 
+7. What are the assumptions for a LDA model when you start adding covariates? 
+8. What is $\pi_k$ denote? 
+9. What is a Bayes classifier? 
+
+
+## [Multivariate Linear Discriminant Analysis and ROC Curves (4.4.3)](https://www.youtube.com/watch?v=pZodpSfe9IA&list=PL5-da3qGB5IC4vaDba5ClatUmFppXLAhE&index=4) (17:42)
+
+1. Why is the gaussian distribution on the top right of page 142 squished? 
+2. Compare (non-mathematically) how the classification process for LDA with 1 predictor, is the same as the classification process for LDS with 2 predictors. 
+3. In the top right picture on page 143, what is the differnece between the dotted and solid lines?
+4. Label each line as `a` (between yellow and green), `b` (between yellow and blue) and `c` (between blue and green). Write out the decision rules in english using these labels. _E.g. if X1 is less than a, and less than c, then classify as green._
+5. Consider the debt example in the textbook (confusion matrix on top of page 145). Why does LDS do such a poor job of classifying the customers who default? 
+
+
+## [Bonus Video: Generalized Linear Models (not in book)](https://csuchico.box.com/s/b46s9kygwxbjopt0duba7ufecvzutzy7) (9:34)
+
+1. Why can't the bikers data be modeled using linear or logistic regression? 
+2. How do you interpret the coefficients of a Poisson Model? Write a generic sentence such as "for every 1 unit increase in X, y......"
+3. Explain the "general" part in GLM. 
+
+
+## [Quadratic Discriminant Analysis and Naive Bayes (4.4.4)](https://csuchico.box.com/s/ztmobv2hlfnmsp1xhtk0vohmi291lc8g) (10:07)
+
+1. Why is this called QDA insead of LDA with more X's? What makes it different and thus, called "quadratic"? 
+2. Which is the more flexible classifer? LDA or QDA? 
+3. Why does it matter whether or not we assume that the $K$ classes share a common covariance matrix? Explain this in terms of the bias-variance tradeoff and parameter estimation. 
+4. When would QDA be more accurate than LDA? 
+5. What are the take home messages for Figure 4.10 and 4.11? What can you learn from these plots?
+
+## Additional Questions
+
+1. If the Bayes decision boundary is linear, do we expect LDA or QDA to perform better on the training set? On the test set?
+2. If the Bayes decision boundary is non-linear, do we expect LDA or QDA to perform better on the training set? On the test set?
+3. In general, as the sample size n increases, do we expect the test prediction accuracy of QDA relative to LDA to improve, decline, or be unchanged? Why?
+4. True or False: Even if the Bayes decision boundary for a given problem is linear, we will probably achieve a superior test error rate using QDA rather than LDA because QDA is flexible enough to model a linear decision boundary. Justify your answer
+
+
+----
+
+## Part III: ISLR Ch 4 # 13a-i. 
+
+
+Do this in a new RMD file using the tidymodels framework. 
+
+
+
+
+
